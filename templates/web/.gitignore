@@ -1,0 +1,58 @@
+# Dependencies
+node_modules/
+vendor/
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Environment variables & secrets (絶対除外)
+.env
+.env.*
+*.env
+**/*.env
+!*.env.example
+!**/*.env.example
+!*.example
+*.secret*
+*.pem
+*.key
+*.pfx
+*.p12
+
+# Database & runtime data
+*.sqlite
+*.db
+data/*.sqlite
+data/*.db
+!data/.gitkeep
+!data/.htaccess
+pids/
+*.pid
+*.pid.lock
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Build & temporary outputs
+dist/
+build/
+out/
+tmp/
+.cache/
+test_results/
+coverage/
+.nyc_output/
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

@@ -1,0 +1,7 @@
+# 外部からの直接アクセスを完全遮断
+<IfModule mod_authz_core.c>
+    Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+    Deny from all
+</IfModule>

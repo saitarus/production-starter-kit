@@ -1,0 +1,19 @@
+Options -Indexes -MultiViews
+
+# セキュリティヘッダー
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# 隠しファイル・環境変数・機密ファイルの遮断
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # ドットで始まる隠しファイル・ディレクトリの遮断
+    RewriteRule (^|/)\. - [F,L]
+
+    # 機密拡張子への直接アクセスを遮断
+    RewriteRule \.(?:env|sql|dump|json|sh|yml|yaml|md|log|bak|conf|ini|service)$ - [F,L]
+</IfModule>

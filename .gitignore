@@ -1,0 +1,115 @@
+# ==============================================================================
+# Global Git Ignore - Production Standards
+# ==============================================================================
+
+# --- Secrets & Environment Variables ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+*.crt
+id_rsa
+id_ecdsa
+id_ed25519
+credentials.json
+client_secret*.json
+service-account*.json
+
+# --- Operating Systems ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# --- IDEs & Editors ---
+.vscode/
+!.vscode/settings.json.example
+!.vscode/extensions.json
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual Environments
+venv/
+.venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# --- Node.js & Web ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-debug.log*
+lerna-debug.log*
+.next/
+out/
+dist/
+.cache/
+
+# --- Database & Backups ---
+*.sqlite
+*.sqlite3
+*.db
+*.dump
+*.sql.gz
+*.bak
+*.old
+*.orig
+
+# --- Logs & Runtime Output ---
+logs/
+*.log
+run.log
+*.err
+*.out
+
+# --- Project Specific Data (Preventing Leaks) ---
+data/input/*
+!data/input/.gitkeep
+data/output/*
+!data/output/.gitkeep
